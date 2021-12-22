@@ -1,0 +1,54 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+h1{
+	color:#996699;
+	text-shadow: 0.1em 0.1em white;
+}
+p{
+	color:#666666;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.calcu-style{
+	text-align: center;
+	border: 5px dashed #FF9966;
+	border-radius: 10px;
+	background-color: #FFCCCC;
+	width: 250px;
+	height: auto;
+	margin:40px auto;
+	padding: 20px 15px;
+}
+
+.blank-style{
+	margin-top: 5px;
+	width: 200px;
+	height: 25px;
+	border: 2px double 	#FF44FF;
+	border-radius: 8px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.button {
+  background-color: #FFFFCC;
+  border: 2px solid #666699;
+  color: #6F00D2;
+  margin-top: 5px;
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+}
+.place{
+	margin-top: 10px;
+}
+.place:hover{
+	background: #FFCC99; 
+	transition: all .3s ease;
+}

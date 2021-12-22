@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lab</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="calcu-style">
+	<h1>JS Calculater</h1>
+	<form action="#">
+	<label><p>Number1</p>
+	<input id="num1" type="text" class="blank-style" >
+	</label>
+	<label><p>Number2</p>
+	<input id="num2" type="text" class="blank-style" >
+	</label>
+	<label><p>Operate way?</p>
+	  <select id="todo" class="blank-style" onchange="setMethod(this.value)">
+	    <option value="+">+</option>
+	    <option value="-">-</option>
+	    <option value="*">*</option>
+	    <option value="/">/</option>
+	  </select>
+	</label>
+	<input id="Calculater" type="button" value="Add" class="place button "  onclick="calculater()">
+	</form>
+	<p id="answer"></p>
+</div>
+
+<script type="text/javascript">
+	
+
+  function calculater(){	
+	  var method = document.getElementById("todo").value;	
+		var firstnum = document.getElementById("num1").value;	// .value是為了得到輸入框的值，如果沒有加只讀到那個框框
+		var secondnum = document.getElementById("num2").value;
+	  var result;
+	  	if(method == "+"){
+	  		result = (parseInt(firstnum) + parseInt(secondnum));
+	  	}else if(method == "-"){
+	  		result = (parseInt(firstnum) - parseInt(secondnum));
+	  	}else if(method == "*"){
+				result = (parseInt(firstnum) * parseInt(secondnum));
+	  	}else if (method == "/") {
+				result = (parseInt(firstnum) / parseInt(secondnum));
+	  	}
+	  	document.getElementById("answer").innerHTML ="Result = "+ result;
+  }
+
+  function setMethod(method){
+  	var calculateWay = document.getElementById('Calculater');
+  	if(method == "+"){
+  		calculateWay.value = 'Add';
+  	}else if(method == "-"){
+  		calculateWay.value = 'Minus';
+  	}else if(method == "*"){
+			calculateWay.value = 'Times';
+  	}else if (method == "/") {
+			calculateWay.value = 'Divided';
+  	}
+		
+	}
+</script>
+
+</body>
+</html>
